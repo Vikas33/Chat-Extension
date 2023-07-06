@@ -21,7 +21,7 @@ export const getReply = createAsyncThunk('getReply', async (message) => {
 const chatSlice = createSlice({
   name: 'chat',
   initialState: {
-    chat: [],
+    chat: JSON.parse(localStorage.getItem('chat')) || [],
     loading: false,
   },
   reducers: {

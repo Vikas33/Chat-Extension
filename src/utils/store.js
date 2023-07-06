@@ -1,19 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import chatSlice from './chatSlice';
-import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
 
-const persistConfig = {
-  key: 'root',
-  storage,
-};
-
-const persistedReducer = persistReducer(persistConfig, chatSlice);
-
-export const store = configureStore({
+const store = configureStore({
   reducer: {
-    chat: persistedReducer,
+    chat: chatSlice,
   },
 });
-
-export const persistor = persistStore(store);
+store.subscribe(() => {
+  const { chat } = store.getState().chat;
+  localStorage.setItem('chat', JSON.stringify(chat));
+});
+export default store;

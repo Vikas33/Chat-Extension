@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css';
 import UserInput from './components/UserInput';
-import { persistor } from './utils/store';
 import { useDispatch } from 'react-redux';
 import { clearChat } from './utils/chatSlice';
 
