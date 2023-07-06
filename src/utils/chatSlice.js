@@ -30,6 +30,11 @@ const chatSlice = createSlice({
       state.loading = true;
       return state;
     },
+    clearChat: (state) => {
+      state.chat = [];
+      state.loading = false;
+      return state;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(getReply.fulfilled, (state, action) => {
@@ -40,6 +45,6 @@ const chatSlice = createSlice({
   },
 });
 
-export const { updateChat } = chatSlice.actions;
+export const { updateChat, clearChat } = chatSlice.actions;
 
 export default chatSlice.reducer;

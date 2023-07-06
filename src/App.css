@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -11,89 +15,7 @@ body {
 
 #root {
   background-color: rgb(242, 242, 242);
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 320px;
   overflow-y: auto;
-}
-
-li {
-  list-style: none;
-}
-
-.input-box {
-  background-color: rgb(242, 242, 242);
-  width: 300px;
-  height: 45px;
-  padding-bottom: 15px;
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  /* transform: translateY(-40px); */
-}
-
-.search-btn {
-  border: solid 1px black;
-  border-left: 0;
-  margin-top: 2px;
-  border-radius: 20px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  margin-top: 20px;
-  cursor: pointer;
-}
-
-.text-area {
-  width: 200px;
-  border: solid 1px black;
-  border-right: 0;
-  padding: 2px;
-  padding-left: 10px;
-  border-radius: 20px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  margin-top: 20px;
-}
-
-.bot-chat {
-  background-color: aliceblue;
-  width: fit-content;
-  inline-size: 95px;
-  overflow-wrap: break-word;
-  padding: 4px;
-  padding-left: 10px;
-  border: solid 1px aliceblue;
-  border-radius: 15px;
-  margin-left: 5px;
-}
-
-.my-chat {
-  margin-top: 10px;
-  width: fit-content;
-  background-color: azure;
-  transform: translateX(180px);
-  inline-size: 95px;
-  overflow-wrap: break-word;
-  padding: 4px;
-  padding-left: 10px;
-  border: solid 1px azure;
-  border-radius: 15px;
-}
-
-.on-state {
-  background-color: rgb(50, 203, 195);
-  width: 300px;
-  cursor: pointer;
-}
-
-.off-state {
-  background-color: rgba(198, 200, 205, 0.52);
-  width: 300px;
-  cursor: pointer;
-}
-
-.start-text {
-  color: rgb(190, 69, 69);
-  font-weight: bolder;
-  width: 100%;
-  font-size: medium;
 }
