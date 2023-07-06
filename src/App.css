@@ -2,37 +2,98 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html,
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#root {
+  background-color: rgb(242, 242, 242);
+  width: 300px;
+  height: 300px;
+  overflow-y: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li {
+  list-style: none;
+}
+
+.input-box {
+  background-color: rgb(242, 242, 242);
+  width: 300px;
+  height: 45px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  /* transform: translateY(-40px); */
+}
+
+.search-btn {
+  border: solid 1px black;
+  border-left: 0;
+  margin-top: 2px;
+  border-radius: 20px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.text-area {
+  width: 200px;
+  border: solid 1px black;
+  border-right: 0;
+  padding: 2px;
+  padding-left: 10px;
+  border-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-top: 20px;
+}
+
+.bot-chat {
+  background-color: aliceblue;
+  width: fit-content;
+  inline-size: 95px;
+  overflow-wrap: break-word;
+  padding: 4px;
+  padding-left: 10px;
+  border: solid 1px aliceblue;
+  border-radius: 15px;
+  margin-left: 5px;
+}
+
+.my-chat {
+  margin-top: 10px;
+  width: fit-content;
+  background-color: azure;
+  transform: translateX(180px);
+  inline-size: 95px;
+  overflow-wrap: break-word;
+  padding: 4px;
+  padding-left: 10px;
+  border: solid 1px azure;
+  border-radius: 15px;
+}
+
+.on-state {
+  background-color: rgb(50, 203, 195);
+  width: 300px;
+  cursor: pointer;
+}
+
+.off-state {
+  background-color: rgba(198, 200, 205, 0.52);
+  width: 300px;
+  cursor: pointer;
+}
+
+.start-text {
+  color: rgb(190, 69, 69);
+  font-weight: bolder;
+  width: 100%;
+  font-size: medium;
 }

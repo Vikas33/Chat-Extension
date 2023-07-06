@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import UserInput from './components/UserInput';
 
 function App() {
+  const [chatOn, setChatOn] = useState(true);
+
+  const buttonState = chatOn ? 'on-state' : 'off-state';
+
+  const handler = (e) => {
+    e.preventDefault();
+    setChatOn(!chatOn);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <button onClick={handler} className={buttonState}>
+        Chat with ChatGPT
+      </button>
+      {chatOn ? (
+        <UserInput />
+      ) : (
+        <div>
+          <p className='start-text'>Solve your queries with ChatGPT!</p>
+        </div>
+      )}
     </div>
   );
 }
